@@ -3,6 +3,7 @@ import datetime
 import json
 import logging
 import pydantic_core
+import fastapi
 
 
 app = func.FunctionApp()
