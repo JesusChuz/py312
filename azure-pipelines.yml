@@ -57,7 +57,7 @@ stages:
     - task: AzureFunctionApp@2
       displayName: 'Deploy Azure Function App'
       inputs:
-        connectedServiceNameARM: 'JesumeWIF-FMEOrg'
+        connectedServiceNameARM: 'JesumeWIF-FMEOrgv2'
         appType: 'functionAppLinux'
         isFlexConsumption: false
         appName: '$(functionAppName)'
