@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Agent VM image name
-  vmImageName: 'ubuntu-22.04'
+  vmImageName: 'ubuntu-24.04'
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
@@ -31,17 +31,17 @@ stages:
 #      inputs:
 #        versionSpec: 3.12 # Functions V2 supports Python 3.6 as of today
 
-    - bash: |
-        pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
-      workingDirectory: $(workingDirectory)
-      displayName: 'Install application dependencies'
-
-#    - task: CmdLine@2
+#    - bash: |
+#        pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt
+#      workingDirectory: $(workingDirectory)
 #      displayName: 'Install application dependencies'
-#      inputs:
-#        script: 'pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt'
+
+    - task: CmdLine@2
+      displayName: 'Install application dependencies'
+      inputs:
+        script: 'pip install --target="./.python_packages/lib/site-packages" -r ./requirements.txt'
 #        workingDirectory: '$(System.DefaultWorkingDirectory)/system/ichris'
-#        workingDirectory: '$(workingDirectory)'
+        workingDirectory: '$(workingDirectory)'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
