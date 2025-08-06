@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'ubuntu-22.04'
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
