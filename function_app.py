@@ -22,7 +22,7 @@ def run(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully. Build with ubuntu 22-04 without spec py ver in pipeline")
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully. Build with ubuntu 22-04 WITH spec py ver in pipeline")
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
