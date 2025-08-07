@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Agent VM image name
-  vmImageName: 'ubuntu-24.04'
+  vmImageName: 'ubuntu-22.04'
 
   # Working Directory
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
@@ -25,7 +25,6 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-
 #    - task: UsePythonVersion@0
 #      displayName: 'Use Python 3.12'
 #      inputs:
